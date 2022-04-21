@@ -5,10 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slider</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div class="container">
+        <div class="card location">
+          <div class="cardBody">
+            <img src="./assets/img/01.jpg" alt="" />
+            <div class="details">
+              <h3 class="title">Svezia</h3>
+              <div class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+                sed cupiditate. Consectetur excepturi magnam mollitia quibusdam
+                natus, in libero totam autem consequatur eos corrupti nulla
+                nobis esse unde est dolorem?
+              </div>
+            </div>
+          </div>
+          <div class="slider">
+            <div class="direction">
+              <div class="prev">
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+              <div class="next">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+            <img src="./assets/img/01.jpg" alt="" class="thumb" />
+            <img src="./assets/img/02.jpg" alt="" class="thumb" />
+            <img src="./assets/img/03.jpg" alt="" class="thumb" />
+            <img src="./assets/img/04.jpg" alt="" class="thumb" />
+            <img src="./assets/img/05.jpg" alt="" class="thumb" />
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="./assets/js/app.js"></script>
   </body>
