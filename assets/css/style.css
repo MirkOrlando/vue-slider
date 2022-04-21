@@ -66,6 +66,7 @@ img {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  z-index: 1000;
 }
 
 .prev,
