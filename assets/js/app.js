@@ -24,7 +24,8 @@ in evidenza rispetto alle altre.
 
 Bonus:
 1- al click su una thumb, visualizzare in grande l'immagine corrispondente
-2- applicare l'autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente
+2- applicare l'autoplay allo slider: 
+   ogni 3 secondi, cambia immagine automaticamente
 3- quando il mouse va in hover sullo slider, bloccare l'autoplay e farlo riprendere quando esce
 */
 
@@ -81,7 +82,13 @@ const app = new Vue(
             getActive(index) {
                 //console.log('get active', index);
                 this.activeLocation = index
+            },
+            timerNext() {
+                setInterval(this.getNext, 3000);
             }
+        },
+        created() {
+            this.timerNext()
         }
     }
 )
