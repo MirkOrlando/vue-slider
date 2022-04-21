@@ -77,6 +77,10 @@ const app = new Vue(
                     this.activeLocation = 0
                 }
                 // console.log(this.activeLocation, this.location.length);
+            },
+            getActive(index) {
+                //console.log('get active', index);
+                this.activeLocation = index
             }
         }
     }

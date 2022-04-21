@@ -29,13 +29,11 @@
             </div>
           </div>
           <div class="slider">
-            <div class="direction">
-              <div class="prev" @click="getPrev">
-                <i class="fa-solid fa-chevron-up"></i>
-              </div>
-              <div class="next" @click="getNext">
-                <i class="fa-solid fa-chevron-down"></i>
-              </div>
+            <div class="prev" @click="getPrev">
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="next" @click="getNext">
+              <i class="fa-solid fa-chevron-down"></i>
             </div>
             <img
               :src="thumb.image"
@@ -43,6 +41,7 @@
               class="thumb"
               :class="activeLocation === index ? 'active' : ''"
               v-for="(thumb, index) in location"
+              @click="getActive(index)"
             />
           </div>
         </div>
