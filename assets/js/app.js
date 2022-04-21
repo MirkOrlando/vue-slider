@@ -32,6 +32,7 @@ const app = new Vue(
     {
         el: '#app',
         data: {
+            activeLocation: 0,
             location: [
                 {
                     image: 'img/01.jpg',
@@ -60,6 +61,23 @@ const app = new Vue(
                 }
             ]
         },
-        methods: {}
+        methods: {
+            getPrev() {
+                // console.log('prev');
+                if (this.activeLocation === 0) {
+                    this.activeLocation = this.location.length
+                }
+                this.activeLocation --
+                // console.log(this.activeLocation, this.location.length);
+            },
+            getNext() {
+                // console.log('next');
+                this.activeLocation ++
+                if (this.activeLocation === this.location.length) {
+                    this.activeLocation = 0
+                }
+                // console.log(this.activeLocation, this.location.length);
+            }
+        }
     }
 )
