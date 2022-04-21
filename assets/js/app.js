@@ -34,7 +34,7 @@ const app = new Vue(
         el: '#app',
         data: {
             activeLocation: 0,
-            t: null,
+            t: undefined,
             isOnOver: false,
             location: [
                 {
@@ -85,22 +85,28 @@ const app = new Vue(
                 //console.log('get active', index);
                 this.activeLocation = index
             },
-            onOver() {
+            handleOver() {
                 this.isOnOver = true;
-                console.log(this.onOver);
-            },
-            timerNext() {
-                // console.log('timerNext');
-                let isOnOver = false;
-                if (isOnOver) {
+                if (this.isOnOver) {
                     clearInterval(this.t)
                 } else {
                     this.t = setInterval(this.getNext, 3000);
                 }
             },
+            handleLeave() {
+                this.isOnOver = false;
+                if (this.isOnOver) {
+                    clearInterval(this.t)
+                } else {
+                    this.t = setInterval(this.getNext, 3000);
+                }
+            },
+/*             timerNext() {
+                this.t = setInterval(this.getNext, 3000);
+            }, */
         },
         created() {
-            this.timerNext()
+            this.handleLeave()
         }
     }
 )
