@@ -34,6 +34,7 @@ const app = new Vue(
         el: '#app',
         data: {
             activeLocation: 0,
+            interval: null,
             location: [
                 {
                     image: 'img/01.jpg',
@@ -84,7 +85,14 @@ const app = new Vue(
                 this.activeLocation = index
             },
             timerNext() {
-                setInterval(this.getNext, 3000);
+                // console.log('timerNext');
+                this.interval = setInterval(this.getNext, 3000);
+                const t = this.interval
+                return t
+            },
+            cleartTimer(t) {
+                console.log(t);
+                clearInterval(t)
             }
         },
         created() {
