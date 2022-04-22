@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightslategray;
+}
+
 img {
   max-width: 100%;
   max-height: 100%;
@@ -22,6 +27,8 @@ img {
   width: 100%;
   height: 100%;
   position: relative;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px #000000d1;
 }
 
 .slider {
@@ -29,10 +36,20 @@ img {
   display: flex;
   flex-direction: column;
   max-height: 100%;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .slider img {
   filter: brightness(0.55);
+}
+
+.slider .thumb:first-of-type {
+  border-top-right-radius: 0.5rem;
+}
+
+.slider .thumb:last-of-type {
+  border-bottom-right-radius: 0.5rem;
 }
 
 .thumb {
@@ -49,17 +66,18 @@ img {
   padding: 1rem;
   text-align: right;
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   right: 0;
   color: white;
-  /*   text-shadow: 10px black;
   width: 100%;
-  background-color: rgba(67, 72, 76, 0.548); */
+  background-color: rgba(67, 72, 76, 0.548);
 }
 
 .cardBody img {
   width: 100%;
   height: 100%;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
 
 .prev,

@@ -26,7 +26,8 @@ Bonus:
 1- al click su una thumb, visualizzare in grande l'immagine corrispondente
 2- applicare l'autoplay allo slider: 
    ogni 3 secondi, cambia immagine automaticamente
-3- quando il mouse va in hover sullo slider, bloccare l'autoplay e farlo riprendere quando esce
+3- quando il mouse va in hover sullo slider, 
+   bloccare l'autoplay e farlo riprendere quando esce
 */
 
 const app = new Vue(
@@ -35,7 +36,6 @@ const app = new Vue(
         data: {
             activeLocation: 0,
             t: undefined,
-            isOnOver: false,
             location: [
                 {
                     image: 'img/01.jpg',
@@ -86,24 +86,11 @@ const app = new Vue(
                 this.activeLocation = index
             },
             handleOver() {
-                this.isOnOver = true;
-                if (this.isOnOver) {
-                    clearInterval(this.t)
-                } else {
-                    this.t = setInterval(this.getNext, 3000);
-                }
+                clearInterval(this.t)
             },
             handleLeave() {
-                this.isOnOver = false;
-                if (this.isOnOver) {
-                    clearInterval(this.t)
-                } else {
-                    this.t = setInterval(this.getNext, 3000);
-                }
-            },
-/*             timerNext() {
                 this.t = setInterval(this.getNext, 3000);
-            }, */
+            },
         },
         created() {
             this.handleLeave()
