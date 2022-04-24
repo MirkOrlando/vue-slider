@@ -86,6 +86,7 @@ const app = new Vue(
                 this.activeLocation = index
             },
             handleOver() {
+                console.log('stop');
                 clearInterval(this.t)
             },
             handleLeave() {

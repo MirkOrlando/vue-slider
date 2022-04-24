@@ -1,114 +1,112 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: lightslategray;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightslategray;
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: fill;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: fill;
 }
 
 .container {
-  width: 80%;
-  max-width: 1000px;
-  height: 400px;
-  margin: 3rem auto;
+    max-width: 779px;
+    height: 324px;
+    margin: 3rem auto;
 }
 
 .card {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 10px #000000d1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px #000000d1;
 }
 
 .slider {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  max-height: 100%;
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
 
 .slider img {
-  filter: brightness(0.55);
+    filter: brightness(0.55);
 }
 
 .slider .thumb:first-of-type {
-  border-top-right-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
 }
 
 .slider .thumb:last-of-type {
-  border-bottom-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
 
 .thumb {
-  height: calc(100% / 5);
+    height: calc(100% / 5);
 }
 
 .cardBody {
-  position: relative;
-  width: 85%;
-  height: 400px;
+    position: relative;
+    width: 85%;
 }
 
 .details {
-  padding: 1rem;
-  text-align: right;
-  position: absolute;
-  bottom: 1rem;
-  right: 0;
-  color: white;
-  width: 100%;
-  background-color: rgba(67, 72, 76, 0.548);
+    padding: 1rem;
+    text-align: right;
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+    color: white;
+    width: 100%;
+    background-color: rgba(67, 72, 76, 0.548);
 }
 
 .cardBody img {
-  width: 100%;
-  height: 100%;
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
 }
 
 .prev,
 .next {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.652);
-  padding: 0.25rem;
-  border-radius: 50%;
-  aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.652);
+    padding: 0.25rem;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
 }
 
 .prev {
-  position: absolute;
-  top: 3%;
-  left: 50%;
-  transform: translate(-50%);
-  z-index: 100;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 100;
 }
 
 .next {
-  position: absolute;
-  bottom: 3%;
-  left: 50%;
-  transform: translate(-50%);
-  z-index: 100;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 100;
 }
 
 img.active {
-  filter: none;
-  border: 4px solid lightgray;
+    filter: none;
+    border: 4px solid lightgray;
 }

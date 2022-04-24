@@ -28,7 +28,11 @@
               <div class="text">{{location[activeLocation].text}}</div>
             </div>
           </div>
-          <div class="slider" @mouseover="handleOver" @mouseleave="handleLeave">
+          <div
+            class="slider"
+            @mouseenter="handleOver"
+            @mouseleave="handleLeave"
+          >
             <div class="prev" @click="getPrev">
               <i class="fa-solid fa-chevron-up"></i>
             </div>
