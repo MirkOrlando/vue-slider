@@ -34,6 +34,7 @@ img {
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 15%;
     max-height: 100%;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
